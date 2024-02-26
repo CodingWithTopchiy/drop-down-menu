@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    border: 0;
+    outline: 0;
+    text-transform: capitalize;
+    font-family: 'Nunito', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: url(img/img-1.jpg) no-repeat center/cover;
+}
+
+/* step 1  */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 10%;
+}
+
+header .logo {
+    color: #151515;
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1500 - 300)));
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+header .logo:hover {
+    letter-spacing: .3rem;
+    transform: scale(1.1);
+}
+
+header .navbar ul {
+    display: flex;
+}
+
+header .navbar ul li {
+    position: relative;
+}
+
+header .navbar ul li a {
+    display: block;
+    padding: 1.5rem;
+    color: #151515;
+    font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1500 - 300)));
+    transition: 0.7s;
+}
+
+header .navbar ul li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* step 2  */
+
+header .navbar ul li ul {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    width: 18rem;
+    background: #fff;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    flex-direction: column;
+    width: 100%;
+    border: .1rem solid rgba(0,0,0,.1);
+}
+
+header .navbar ul li ul li ul {
+    position: absolute;
+    left: 18rem;
+    top: 0;
+}
+
+header .navbar ul li:hover > ul {
+    display: initial;
+}
+
+/* step 3  */
+
+#menu {
+    display: none;
+}
+
+header label {
+    font-size: 2rem;
+    color: #151515;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media (max-width: 991px) {
+    header {
+        padding: 2rem;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        display: none;
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+    }
+
+    header .navbar ul li {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background: #999;
+    }
+
+    header .navbar ul li ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    header .navbar ul li ul li ul li {
+        background: #777;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    /* step 4  */
+
+    label .fa-times {
+        display: none;
+    }
+
+    #menu:checked ~ label .fa-bars {
+        display: none;
+    }
+
+    #menu:checked ~ label .fa-times {
+        display: block;
+    }
+}

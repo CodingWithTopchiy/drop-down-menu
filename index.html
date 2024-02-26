@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive drop down menu using only HTML & CSS</title>
+
+    <!-- custom style css link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font link  -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+    <!-- fontawesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+
+        <a href="#" class="logo">Logo</a>
+
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </label>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About &bigtriangledown; </a>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our history</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Services &bigtriangledown; </a>
+                    <ul>
+                        <li><a href="#">web design</a></li>
+                        <li><a href="#">web dev &bigtriangledown; </a>
+                            <ul>
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                                <li><a href="#">React</a></li>
+                                <li><a href="#">Node.js</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">marketing</a></li>
+                        <li><a href="#">support 24/7</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+</body>
+</html>
